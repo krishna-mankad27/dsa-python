@@ -30,11 +30,12 @@ def LongestSubarraySumK(nums,k):
     total = 0
     for j in range(n):
         total +=nums[j]
+        while total>k:
+                    total -=nums[i]
+                    i+=1
         if total == k :
             maxlen3 = max(maxlen3,j-i+1)
-        if total>k:
-            total -=nums[i]
-            i+=1    
+            
     return maxlen1,maxlen2,maxlen3 
     
     
