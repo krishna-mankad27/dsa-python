@@ -15,5 +15,7 @@ def MajorityElement(nums):
     if count>int(len(nums)/2):
         return element
     else:return None
+    #brute ->count each elements total count using nested looping
+    #better use a hashmap to count each element 
 
 print(MajorityElement([1,2,2,1,1,1,0,0,0,0,0,0,0,0,2,1,1,]))
